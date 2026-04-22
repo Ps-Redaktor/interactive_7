@@ -1,0 +1,193 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist: First Three Bits</title>
+  <style>
+    :root {
+      --primary: #0b1e33;
+      --secondary: #475569;
+      --accent: #3b82f6;
+      --bg: #f4f6f9;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: var(--primary);
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .checklist-container {
+      background: var(--card-bg);
+      max-width: 850px;
+      width: 100%;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      margin-bottom: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+    }
+
+    .bits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .bit-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+      background: #fff;
+    }
+
+    .img-wrapper {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 15px;
+      background: #fafafa;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .img-wrapper img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .bit-info h3 {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--bg);
+      padding-bottom: 5px;
+    }
+
+    .bit-info p {
+      font-size: 0.8rem;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: var(--secondary);
+    }
+
+    .label {
+      font-weight: 600;
+      color: var(--primary);
+      display: block;
+      margin-bottom: 2px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .controls {
+      width: 100%;
+      max-width: 850px;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 20px;
+    }
+
+    .btn-download {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-download:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    /* Print styles */
+    @media print {
+      body { background: white; padding: 0; }
+      .controls { display: none; }
+      .checklist-container { box-shadow: none; border: none; padding: 10px; width: 100%; max-width: 100%; }
+      .bit-card { border: 1px solid #eee; }
+    }
+
+    @media (max-width: 650px) {
+      .bits-grid { grid-template-columns: 1fr; }
+      .img-wrapper { height: 150px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="checklist-container">
+    <header>
+      <h1>First Three Bits for a Start</h1>
+    </header>
+
+    <div class="bits-grid">
+      <div class="bit-card">
+        <div class="img-wrapper">
+          <img src="https://ps-redaktor.github.io/interactive_7/10.png" alt="Ceramic Bit">
+        </div>
+        <div class="bit-info">
+          <h3>Bit 1. Ceramic, Blue</h3>
+          <p><span class="label">Task:</span> Safe removal of gel polish.</p>
+          <p><span class="label">Why:</span> Does not bounce, generates less heat, removes material effectively.</p>
+        </div>
+      </div>
+
+      <div class="bit-card">
+        <div class="img-wrapper">
+          <img src="https://ps-redaktor.github.io/interactive_7/11.png" alt="Flame Bit">
+        </div>
+        <div class="bit-info">
+          <h3>Bit 2. Flame, Yellow</h3>
+          <p><span class="label">Task:</span> Cuticle and sinus treatment.</p>
+          <p><span class="label">Why:</span> Shape follows anatomy; soft grit minimizes damage risk.</p>
+        </div>
+      </div>
+
+      <div class="bit-card">
+        <div class="img-wrapper">
+          <img src="https://ps-redaktor.github.io/interactive_7/12.png" alt="Cylinder Bit">
+        </div>
+        <div class="bit-info">
+          <h3>Bit 3. Rounded Cylinder, Red</h3>
+          <p><span class="label">Task:</span> Lifting cuticles, buffing sidewalls.</p>
+          <p><span class="label">Why:</span> Ideal for polishing skin; side surface for complex areas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn-download" onclick="window.print()">
+      Download the checklist (PDF)
+    </button>
+  </div>
+
+</body>
